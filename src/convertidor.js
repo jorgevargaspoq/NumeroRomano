@@ -1,4 +1,4 @@
-export function convertirARomano(num) {
+function convertirARomano(num) {
     if (num <= 0 || num > 1000) return "Número fuera de rango (1-1000)";
 
     const valores = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
@@ -14,3 +14,5 @@ export function convertirARomano(num) {
     }
     return resultado;
 }
+
+export default convertirARomano;

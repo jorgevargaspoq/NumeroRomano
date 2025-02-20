@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import { convertirARomano } from "./convertidor.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+window.convertirNumero = function() {
+    const input = document.getElementById("numeroInput");
+    const resultado = document.getElementById("resultado");
+    const numero = parseInt(input.value);
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+    if (isNaN(numero)) {
+        resultado.textContent = "Por favor, ingresa un número válido.";
+        return;
+    }
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-});
+    resultado.textContent = convertirARomano(numero);
+};

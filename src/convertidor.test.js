@@ -61,6 +61,27 @@ describe("convertirARomano", () => {
           expect(convertirARomano(1000)).toBe("M");
         });
       });
+      describe("convertirARomano", () => {
+        it("debería retornar 'XIII' para el número 13", () => {
+          expect(convertirARomano(13)).toBe("XIII");
+        });
+      
+        it("debería retornar 'XLIX' para el número 49", () => {
+          expect(convertirARomano(49)).toBe("XLIX");
+        });
+      
+        it("debería retornar 'XCIX' para el número 99", () => {
+          expect(convertirARomano(99)).toBe("XCIX");
+        });
+      
+        it("debería retornar 'CDXLIV' para el número 444", () => {
+          expect(convertirARomano(444)).toBe("CDXLIV");
+        });
+      
+        it("debería retornar 'CMXCIX' para el número 999", () => {
+          expect(convertirARomano(999)).toBe("CMXCIX");
+        });
+      });
       
   });
   
